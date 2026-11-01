@@ -1,0 +1,13 @@
+BabaCare – első online verzió
+
+1. Hozz létre külön Firebase-projektet a BabaCare számára a https://console.firebase.google.com/ oldalon.
+2. Authentication > Sign-in method: engedélyezd az Email/Password belépést.
+3. Firestore Database: hozd létre production módban, és a Rules fülön másold be a firestore.rules tartalmát, majd Publish.
+4. Project settings > Your apps > Web app: regisztrálj webes appot, másold a firebaseConfig apiKey, authDomain, projectId, appId mezőit a firebase-config.js fájlba.
+5. Authentication > Settings > Authorized domains: add hozzá a premkft12-boop.github.io domaint, vagy az új GitHub Pages-domainedet.
+6. Hozz létre egy ÚJ, nyilvános GitHub repót pl. babacare-app néven, és töltsd fel az index.html, firebase-config.js, manifest.webmanifest fájlokat. A firestore.rules fájlt NEM szükséges nyilvánosan feltölteni, csak a Firebase konzolban alkalmazni.
+7. GitHub Settings > Pages > Deploy from a branch > main / root. Várd meg a közzétételt.
+8. Tesztelj két külön fiókkal, külön böngészőben. Az A fiók eseményei ne jelenjenek meg B fiókban.
+9. Telefonon: Safari > Megosztás > Főképernyőhöz adás, Android Chrome > Menü > Főképernyőhöz adás. A tényleges PWA telepítési viselkedés böngészőtől függ.
+
+FONTOS: ez egy első, működőképesnek szánt fejlesztői alap, nincs élesben tesztelve, és még nem alkalmas teljes körű, több családtagos közös használatra. A Firebase-projektet nem tudjuk létrehozni helyetted. A felhasználói adatok nem helyben, hanem a Firebase Firestore-ban tárolódnak, amikor a konfiguráció és jogosultságok helyesen működnek. Az adatvédelmi tájékoztató, biztonsági tesztelés és üzemeltetés az éles nyilvános indulás előtt szükséges.

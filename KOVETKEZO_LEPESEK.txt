@@ -1,0 +1,14 @@
+BabaCare – Firebase összekapcsolva (Google-belépés)
+
+A webes Firebase-konfigurációt beillesztettük a firebase-config.js fájlba.
+A weboldal Google-fiókos belépés gombot tartalmaz, és a naplóbejegyzéseket a Firestore users/{uid}/events útvonalra írja.
+
+KÖVETKEZŐ LÉPÉS:
+1. Firebase > Authentication > Settings > Authorized domains: add hozzá a GitHub Pages webhely doménjét (például: premkft12-boop.github.io). Az új GitHub repó nevét ne írd ide, csak a domént.
+2. A Firebase Authentication > Sign-in method > Google legyen engedélyezve.
+3. Firestore > Rules: a saját users/{uid} útvonalhoz engedélyezett szabályok legyenek közzétéve.
+4. Külön GitHub repóba töltsd fel az index.html, firebase-config.js, manifest.webmanifest fájlokat. A fájlok ugyanabban a mappában legyenek.
+5. GitHub > Settings > Pages > Deploy from a branch > main / root.
+6. Teszteld a Google-belépést és a naplóbejegyzés mentését, majd másik böngészőben, másik Google-fiókkal az adatok elkülönítését.
+
+A kódot szintaktikailag ellenőriztük, de éles Firebase-belépést és biztonsági tesztet innen nem végeztünk. Nem alkalmas nyilvános indulásra adatvédelmi tájékoztató, jogosultsági teszt és adatmegőrzési/mentési terv nélkül.
